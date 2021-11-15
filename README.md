@@ -1,16 +1,14 @@
-# android-example
+# VDS-NC Checker Library
 
-[![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://jitpack.io/#jitpack/android-example)
+[![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://URL) TODO: Replace with the real Jitpack URL
 
-Example Android library project that works with jitpack.io.
+To better inform your usage of this library, please see [here](https://www.passports.gov.au/vds-nc-checker) for the business case for the original VDS-NC Checker.
 
-See this [Tutorial](https://medium.com/@ome450901/publish-an-android-library-by-jitpack-a0342684cbd0) on how to publish an Android Library with JitPack.
+This library is intended for use by entities and organisations that need to validate [Visible Digital Seals](https://www.icao.int/Security/FAL/TRIP/PublishingImages/Pages/Publications/Visible%20Digital%20Seal%20for%20non-constrained%20environments%20%28VDS-NC%29.pdf), typically employed in passports and other identifying/travel documentation.
 
-For more details check out the [documentation](https://github.com/jitpack/jitpack.io/blob/master/ANDROID.md)
+## Installation
 
-https://jitpack.io/#jitpack/android-example
-
-Add it to your build.gradle with:
+You may add the library via your build.gradle file; firstly add [Jitpack](https://jitpack.io/) to your repository list:
 ```gradle
 allprojects {
     repositories {
@@ -18,38 +16,12 @@ allprojects {
     }
 }
 ```
-and:
+and then add the dependency:
 
 ```gradle
 dependencies {
-    compile 'com.github.jitpack:android-example:{latest version}'
+    implementation 'au.gov.dfat.lib.vdsncchecker:{ReleaseNumber}'
 }
 ```
 
-## Multiple build variants
-
-If your library uses multiple flavours then see this example:
-https://github.com/jitpack-io/android-jitpack-library-example
-
-## Adding the maven plugin
-
-To enable installing into local maven repository and JitPack you need to add the [android-maven](https://github.com/dcendents/android-maven-gradle-plugin) plugin:
-
-1. Add `classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'` to root build.gradle under `buildscript { dependencies {`
-2. Add `com.github.dcendents.android-maven` to the library/build.gradle
-
-After these changes you should be able to run:
-
-    ./gradlew install
-    
-from the root of your project. If install works and you have added a GitHub release it should work on jitpack.io
-
-## Adding a sample app 
-
-If you add a sample app to the same repo then your app needs to have a dependency on the library. To do this in your app/build.gradle add:
-
-```gradle
-    dependencies {
-        compile project(':library')
-    }
-```
+Alternatively, you may download the source code directly from this repository and modify it to fit your purpose, as per the [MIT License](https://opensource.org/licenses/MIT)
